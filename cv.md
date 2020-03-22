@@ -11,10 +11,10 @@ I'm broadly interested in theoretical computer science and programming languages
 ## Education
 
 #### Bachelor of Arts, Cornell University, Ithaca, NY, USA - 2019
-Magna cum laude in Computer Science <br>
-Cum laude in Mathematics <br>
-Cum laude in Physics <br>
-with Distinction in all subjects. <br>
+*magna cum laude* in Computer Science <br>
+*cum laude* in Mathematics <br>
+*cum laude* in Physics <br>
+with distinction in all subjects. <br>
 
 #### ISC Board, Lilavatibai Podar High School, Mumbai, Maharashtra, India - 2016
 97.75% in ISC Board (Physics/Chemistry/Mathematics/Computer Science) <br>
