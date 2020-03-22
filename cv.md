@@ -6,7 +6,7 @@ permalink: /cv/
 ---
 
 ## Research Interests
-I'm broadly interested in theoretical computer science and programming languages.
+My interests lie broadly in theoretical computer science and programming languages.
 
 ## Education
 
