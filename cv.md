@@ -28,7 +28,7 @@ Azure Reserved Instance Team &emsp; *January 2020 - present* <br>
 #### Teaching Assistant, Cornell University, Ithaca, NY
 Text Mining for History and Literature &emsp; *September 2019 - December 2019* <br>
 Introduction to Algorithms &emsp; *January 2019 - May 2019, January 2018 - October 2018* <br>
-Data Structures and Object Oriented Programming &emsp; *January 2017 - Decmeber 2017* <br>
+Data Structures and Object Oriented Programming &emsp; *January 2017 - December 2017* <br>
 
 #### Software Engineering Intern, Microsoft, Redmond, WA
 Azure Reserved Instances team &emsp; *May 2019 - August 2019, May 2018 - August 2018* <br>
