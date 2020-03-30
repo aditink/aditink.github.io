@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://localhost:4000/path_independence/" />
 <meta property="og:site_name" content="Aditi Kabra" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/path_independence/","headline":"Path Independence","@type":"WebPage","@context":"https://schema.org"}</script>
+{"headline":"Path Independence","url":"http://localhost:4000/path_independence/","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Aditi Kabra" /></head>
 <body><header class="site-header" role="banner">
@@ -39,11 +39,11 @@
   </header>
 
   <div class="post-content">
-    <p>Consider the category theory construction where every path between a common source and sink is equal. 
-Such <em>path independent graphs</em> arise frequently in practice- from the implicit type conversion graph in programming languages like scala, to the category of units of measure where morphisms are conversions between the units.
-It is often useful to be able to verify that a category is indeed stays path independent over the course of construction. I am working on efficient ways to perform such a check.</p>
+    <p>Consider the graph representing a category such that every path between a common source and sink is equal. 
+Such <em>path independent graphs</em> arise frequently in practice- from the implicit type conversion graph for a program in languages like scala, to the category of units of measure where morphisms are conversions between the units.
+It is often useful to be able to check that a graph indeed stays path independent over the course of its construction. I am working on efficient ways to perform such verification.</p>
 
-<p>As a case study to evaluate the idea, we are implementing the algorithm in the compiler of Gator, a domain specific programming language for geometry types, in order to ensure that user defined transformations between spaces stay consistent.</p>
+<p>As a case study to evaluate our ideas, we are applying them in the compiler of Gator, a domain specific programming language for geometry types. Our algorithm is used to ensure that user defined transformations between spaces stay consistent, and the compiler, deterministic as it makes automatic conversion choices.</p>
 
   </div>
 
