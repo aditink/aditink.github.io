@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Literature Reviews: Walking the Citation Graph"
+title:  "Literature Reviews"
 # date:   2019-04-29 12:37:06 -0400 # Still a draft!
 categories: literature
 ---
