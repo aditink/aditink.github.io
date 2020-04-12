@@ -69,7 +69,7 @@ The subject of this case study turned out to be unusual in that I could rely on 
     Then you could either run a search with these keywords or use them to narrow down and filter through the results that cite the paper.
 
 #### Climbing the Citation Tree <a name="citationTree"></a>
-This is really simple. Going back to the [tree analogy](#treeAnalogy), to climb "up" the paper tree, towards the root, look at the papers cited for the fundamental underlying concepts in the work. These papers are the predecessor nodes of the current paper. You look them up and repeat the process as often as required to climb the citation tree. The reverse can also be done- you can descend down the tree by looking at the important articles that cite the current paper using the Power of Modern Search Engines.
+Going back to the [tree analogy](#treeAnalogy), to climb "up" the paper tree, towards the root, look at the papers cited for the fundamental underlying concepts in the work. These papers are the predecessor nodes of the current paper. You look them up and repeat the process as often as required to climb the citation tree. The reverse can also be done- you can descend down the tree by looking at the important articles that cite the current paper using the Power of Modern Search Engines.
 
 Climbing trees through citations in this fashion can lead to a sampling bias that helps you identify more important papers. The papers that a randomly chosen paper cites would on an average have more citations than the original paper, akin to the [friendship paradox](https://en.wikipedia.org/wiki/Friendship_paradox).
 
