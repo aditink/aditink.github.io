@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Testing frameworks for a decoupled Frontend and Backend"
+title:  "A Testing Framework for a decoupled Frontend and Backend"
 # date:   2019-04-29 12:37:06 -0400 # Still a draft!
 categories: testing
 ---
