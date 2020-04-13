@@ -1,0 +1,72 @@
+---
+layout: post
+title:  "Testing frameworks for a decoupled Frontend and Backend"
+# date:   2019-04-29 12:37:06 -0400 # Still a draft!
+categories: testing
+---
+
+I am faced with the interesting task of designing an effective testing system for a web service with a decoupled back end and frontend, and multiple dependencies on other services. This post is about the interesting design and implementation questions that arise.
+
+The ultimate vision (due to my amazing manager) is to create a framework capable of automating the running of end to end test suites on scenarios deduced from logs. This way, when a failure occurs in the live system, it would be easy to drill down to the cause by running the tests generating mock dependency responses from the logs.
+Further, the logs could then be easily modified into regression tests.
+
+As a first step, I identify the requirements of the framework, and what I would like it to be able to do.
+* Scenario 1: Test driven development
+    
+    I want it to be easy to write new tests and modify tests when developing new features.
+    This suggests that 
+    - There should be an easy, simplistic way to inject handwritten responses into mocks. Given the fact that it should also be possible to read from logs, I see some different potential designs: 
+      + mocks could listen to "eventHandlers" that hand in data to the mock, separate implementations running depending on what the source of behavior of the mocks is.
+      + mocks could depend on and interface for "dataProviders", which similarly read from different sources.
+      + Logs could be compiled down to a format that the mocks would read.
+    The advantages and disadvantages of each pattern will be discussed later.
+    - Reusability ought to be built into the system. A change in the contract of one piece somewhere in the system or its dependencies should require only a minimal number of changes in testing code.
+
+* Scenario 2: Debugging
+    
+    This testing framework has the potential to make debugging much easier. Influenced by an [article on effective debugging](https://hackernoon.com/how-to-debug-any-problem-ac6f8a867fae), I list the things I would like my framework to be able to support.
+    - To be able to quickly identify what still works, and what doesn't.
+      I think of the system in terms of length up and down the stack, and breadth across the processes in the service. I want the framework to be able to slice and dice either.
+      
+      To "dice", or cut across the length of the system and test a smaller part of the stack, I would like mocking at multiple levels. If class Controller, further down the stack, depends on class Manager, which in turn depends on DataClient, I want to have mocks for all of these. I want to say, for example, that when the Manager is mocked, things still work, so the problem must lie at a lower level in the logic. When I mock the storage client things break, so the problem lies in the Manager's logic.
+
+      To "slice" or cut away the breadth of the system, I would like to be able to mock some components but not others. For example, If class Controller depends on two Managers, I'd like to be able to mock one but not the other.
+
+    - To be able to simplify the tests easily
+      Starting from a complex failure scenario, I would like it to be possible to easily modify the inputs to get to the simplest case where the error still occurs.
+      What this amounts to is it should be easy to put replace some mocks with the "simple" scenario result, while retaining complexity for other pieces.
+      One solution that this suggests is some sort of compilation from logs to test files, since modifying the logs would be a lot harder than modifying a format specifically meant for the mocks. 
+
+    - Enable hypothesis driven search for the problem.
+      I think what is required to support this overlaps with the features already discussed- the ability to slice and dice across the system, and easily modify and simplify tests.
+    
+    - Generating anti-regression tests
+      This also could be done with a combination of log-read mock generation.
+
+* Other general requirements
+
+  - The one thing that must absolutely not happen is having the   mocks somehow getting called in the production system.
+  
+  All mocks should be in a separate project, away from the production system. The ideal solution is a separate test host could take in the production system as references and inject mocks.
+
+  - Running tests across a decoupled back end and front end.
+
+  There ought to be one place where execution stars, that owns overarching control during a test, it should be possible to control both the back end and the UX from this place.
+  <!-- With a single action I would like it to be possible to start both the front end and the back end. -->
+  If this "place" is in the UX test suite, then which mocks are to be used could be communicated via test headers and flags. The flags would mean nothing if they hit a production end point, and would only be accounted for in the test host.
+  If the "place" lies in the back end test host then it should be able to call upon the UX testing framework (I'm going to use selenium).
+  The latter has the advantage that the setup would all happen in one place, one would not need to startup the back end test host and UX hosting separately. There would also be no overpowered flags in the url.
+  It is important to note that whichever way I proceed, I want to be able to leverage my IDE's ability to set breakpoints. In my case, with Visual Studio I can debug across multiple projects so life is easy.
+  
+With these requirements laid out, I go on on to take a stab at the questions that arise.
+
+* So, what pattern do we follow to get have the ability to switch out mock data sources?
+  - I see the problem with an event handlers to be that they are too loosely tied into the application. While running the program you simply trust that they will pick things up. Further, I'm using C# and I suspect that dependency injection would be more idiomatic and better supported. An advantage is that in applications like logging, treating the event handling as externally attached from a separate testing interface might be the right way to think of things.
+  - I'm inclined to use dependency injection and have ways to re-register different mock readers. I think that this allows for the flexibility of adding more ways to put in mock data while still having the robustness advantages of a hard dependency.
+  - Having a transpiler from logs might still be useful. The intermediate language files could cover the easy-to-edit requirements. Not only would an intermediate language make it easy to edit tests, but also automatic test generation would make it possible to enforce the correct reusing of testing code during test generation so that it would be easier to maintain tests in the event of contract changes.
+
+* How do we bundle our two services into a single-click start while still leveraging IDE debugging
+  
+  There are three processes that need to be running during test runs. (1) The API server (2) the front end (side loaded) (3) the tests. While (3) should be hosted by the IDE while debugging locally, the situation may be different for continuous integration. So the project that we are testing must set the other two up and running.
+
+The aim of this post was to share ideas about what I think can be a very powerful testing framework, in the hope that other engineers trying to solve a similar problem may find some useful ideas, or in turn have suggestions. I will update what I have written if in the process of implementing or maintaining, I come across more points of interest.
