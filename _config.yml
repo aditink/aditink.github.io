@@ -17,18 +17,14 @@ title: Aditi Kabra
 email: ank55@cornell.edu
 description: >- 
         Aditi Kabra
-short_description: >- 
-        I'm a software engineer at Microsoft with research interests in programming languages and theory.
-        As an undergraduate at Cornell, I worked on a domain specific programming language for geometry types, and on the applications and limitations of a Gaussian Boson Sampling device.
-        I am currently working on efficiently verifying path information properties over the course of online addition to a graph.
-
-long_description: >- # this means to ignore newlines until "baseurl:"
-  I'm currently a software engineer at Microsoft, and work in the Azure reserved instances team.
-  My research interests lie broadly in programming languages and theory.
-  As an undergraduate at Cornell, I was a part of <a href="https://capra.cs.cornell.edu/">Capra</a>, where I contributed to Gator, a domain specific programming language for geometry types.
+short_description:
+long_description:
+  I'm a first year PhD student at Carnegie Mellon University, where I work  with André Platzer in the <a href="https://www.ls.cs.cmu.edu/">Logical Systems Lab</a>.
+  My research interests lie in the formal verification of cyber physical systems, and more generally in programming languages and theory. <br>
+  Previously, I was software engineer at Microsoft, and worked in the Azure reserved instances team.
+  As an undergraduate at Cornell, I was a part of <a href="https://capra.cs.cornell.edu/">Capra</a>, where I contributed to Gator, a domain specific programming language for geometry types, and worked on an algorithm to efficiently verify the commutativity of diagrams such as those representing the transformation between types.
   I also worked on understanding the scope and applications of Gaussian Boson Sampling at the <a href="https://mcmahon.aep.cornell.edu/">McMahon Lab</a>.
-  I am currently working on how to efficiently verify path independence of morphisms over the course of online addition to a category,
-  a problem that finds application in situations like the compilation of programs with implicit type conversion.
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: allikabra

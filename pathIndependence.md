@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Path Independence
-order: 1
 permalink: /path_independence/
 ---
 
