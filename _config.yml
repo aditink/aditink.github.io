@@ -15,9 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Aditi Kabra
 email: ank55@cornell.edu
-description: >- 
-        Aditi Kabra
-short_description:
+description: PhD student in Computer Science at Carnegie Mellon University
+short_description: 
 long_description:
   I'm a first year PhD student at Carnegie Mellon University, where I work  with André Platzer in the <a href="https://www.ls.cs.cmu.edu/">Logical Systems Lab</a>.
   My research interests lie in the formal verification of cyber physical systems, and more generally in programming languages and theory. <br>
