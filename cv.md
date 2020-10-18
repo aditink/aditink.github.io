@@ -6,14 +6,20 @@ permalink: /cv/
 ---
 
 ## Research Interests
-My interests lie broadly in theoretical computer science and programming languages.
+My interests lie broadly in theoretical computer science and programming languages. I work on the formal verification of cyber physical systems.
 
 ## Publications
-[Geometry Types for Graphics Programming](https://2020.splashcon.org/details/splash-2020-oopsla/49/Geometry-Types-for-Graphics-Programming) Dietrich Geisler, Irene Yoon, Aditi Kabra, Horace He, Yinnon Sanders, Adrian Sampson. In OOPSLA 2020.
+[Geometry Types for Graphics Programming](/assets/gator-oopsla2020-preprint.pdf) Dietrich Geisler, Irene Yoon, Aditi Kabra, Horace He, Yinnon Sanders, Adrian Sampson. <br>
+OOPSLA 2020.
 
-[Online Verification of Commutativity](/assets/paper.pdf) Aditi Kabra, Dietrich Geisler, Adrian Sampson. In TAPAS 2020.
+[Online Verification of Commutativity](/assets/commutativity-tapas2020-preprint.pdf) Aditi Kabra, Dietrich Geisler, Adrian Sampson. <br>
+TAPAS 2020.
 
 ## Education
+
+#### Candidate for PhD in Computer Science, Carnegie Mellon University, Pittsburgh, PA, USA
+Fall 2020 - present. <br>
+Advisor: André Platzer.
 
 #### Bachelor of Arts, Cornell University, Ithaca, NY, USA - 2019
 *magna cum laude* in Computer Science <br>
@@ -28,7 +34,7 @@ with distinction in all subjects. <br>
 ## Employment History
 
 #### Software Engineer (IC 2), Microsoft, Redmond, WA
-Azure Reserved Instance Team &emsp; *January 2020 - present* <br>
+Azure Reserved Instance Team &emsp; *January 2020 - August 2020* <br>
 
 #### Teaching Assistant, Cornell University, Ithaca, NY
 Text Mining for History and Literature &emsp; *September 2019 - December 2019* <br>
