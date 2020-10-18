@@ -8,6 +8,11 @@ permalink: /cv/
 ## Research Interests
 My interests lie broadly in theoretical computer science and programming languages.
 
+## Publications
+[Geometry Types for Graphics Programming](https://2020.splashcon.org/details/splash-2020-oopsla/49/Geometry-Types-for-Graphics-Programming) Dietrich Geisler, Irene Yoon, Aditi Kabra, Horace He, Yinnon Sanders, Adrian Sampson. In OOPSLA 2020.
+
+[Online Verification of Commutativity](/assets/paper.pdf) Aditi Kabra, Dietrich Geisler, Adrian Sampson. In TAPAS 2020.
+
 ## Education
 
 #### Bachelor of Arts, Cornell University, Ithaca, NY, USA - 2019
