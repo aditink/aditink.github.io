@@ -9,7 +9,7 @@ permalink: /cv/
 I am interested in cyber physical system (CPS) controller synthesis, and more generally, in formal methods.
 
 ## Publications
-[Verified Train Controllers for the Federal Railroad Administration Model: Balancing Competing Brake and Track Forces](assets/train-control-emsoft-preprint.pdf). Aditi Kabra, Stefan Mitsch, André Platzer.
+[Verified Train Controllers for the Federal Railroad Administration Model: Balancing Competing Brake and Track Forces](assets/train-control-emsoft-preprint.pdf). Aditi Kabra, Stefan Mitsch, André Platzer. <br>
 EMSOFT 2022.
 
 [Geometry Types for Graphics Programming](/assets/gator-oopsla2020-preprint.pdf). Dietrich Geisler, Irene Yoon, Aditi Kabra, Horace He, Yinnon Sanders, Adrian Sampson. <br>
