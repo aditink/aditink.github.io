@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Interpreting with Menhir"
+---
+
+In my most recent work on hybrid program synthesis, I'm writing a parser with Menhir.
+Here I note some things I learnt while trying to debug my work.
+
+## Menhir as an Interprester
+
+Menhir works as an interpreter. This can be very useful while debugging.
+
+Assuming that your parser is called parser.mly and is located in the current directory, the command to use would be:
+
+``` menhir --interpret --interpret-show-cst ./parser.mly```
+
+```--interpret``` starts menhir in interpreter mode and ```interpret-show-cst``` shows you the syntax tree if you write a *sentence* that gets accepted.
+
+Over here, sentence is a sequence of tokens.
+1. If you have multiple start symbols (the things early in the file that look like ```%start <Term.t> term```), then you need to specify the start symbol at the start of you sentence.
+So a sentence for this ```term``` symbol might look like ```term: INT PLUS INT```, as opposed to just ```INT PLUS INT```.
+2. Since this is the parser, remember to write your sentence with lexed tokens!
+Something like ```formula: INT EQ INT``` as opposed to ```formula: 0 == 1```.
+
+## Debugging why a test program doesn't parse.
+
+First lex the program.
+I'm using 
