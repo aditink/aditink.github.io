@@ -14,6 +14,8 @@ Reality restricts engineers to performing a finite number of tests, checking onl
 Train motion is complicated and involves many parameters, and train infrastructure is complicated with many moving parts and communicating subsystems.
 Testing is simply too limited a technology to check every scenario and catch every bug.
 
+## Formal Verification
+
 This is where formal verification enters the picture.
 The idea is to model the train control software as well as train subsystems and dynamics mathematically, in a suitable logic.
 Within this logic, following mathematical rules, we write a _proof of safety_.
@@ -28,7 +30,9 @@ By using mathematical rules, we were able to derive the conclusion we were inter
 Train controllers are certainly a lot more complicated, but the same idea applies: use mathematical transformations to derive conclusions about the controller with certainty.
 Further, to preclude the possibility of human error in the math, a computer checks the proof to certify that it works out.
 
-Certainty in correctness is very valuable.
+## Why Formal Verification?
+
+Being certain about correctness is very valuable.
 Not only does it save lives and provide peace of mind, but also, precision in reasoning can permit more aggressive, efficient train operation.
 No longer would engineers have to leave conservative margins for errors that they can not precisely reason about.
 Trains scheduled closer together can mean increased throughput.
@@ -36,6 +40,8 @@ Likewise, as trains driven by artificial intelligence become a possibility, it i
 Knowing that the train protection software handles every edge case correctly becomes essential.
 Formal methods-based verification can also make it easier to handle updated system requirements than simulations.
 Instead of rerunning an entire test suite, only relevant modification in the proof would be required.
+
+## A Proof of Concept Verified Train Protection System
 
 As a proof of concept, we created a verified train protection system.
 We proved the train protection safe against the train kinematics model from [1] (the FRA paper that develops a PTC braking algorithm for freight trains).
