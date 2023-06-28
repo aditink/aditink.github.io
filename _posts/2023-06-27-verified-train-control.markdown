@@ -2,7 +2,7 @@
 layout: post
 title:  "A Verified Train Protection System"
 date:   2023-06-27 12:07:06 -0400
-categories: literature
+categories: draft
 ---
 
 Train protection systems safeguard railroad operation by keeping motion within a safe envelope, deciding when to slow trains down to avoid collisions with other trains on the track, stay inside movement authorities (the region of the track that a signalling system allows a train to be in), and navigate slopes, curves, and tunnels safely.
