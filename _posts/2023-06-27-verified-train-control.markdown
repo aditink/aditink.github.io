@@ -51,7 +51,7 @@ We sought to design a mathematically sophisticated train protection system that 
 The technical challenges are summarized in [our paper at EMSOFT 2022](assets/train-control-emsoft-preprint.pdf), and also in [this video](https://www.youtube.com/watch?v=TKRSZA_61cM) of the corresponding talk.
 Running some experiments to understand the behavior of our system, relative to the PTC algorithm specified in [1], we found scenarios where the verified protection system a 4X improvement in reducing the undershoot during braking enforcement.
 The train protection system that we created was symbolic, meaning that by substituting in concrete values for the various parameters via the appropriate methods [2], we can easily obtain concrete verified train protection system tailored to specific railroads and trains.
-I am interested in closing the gaps between the current state of the art in verification and what industry would find useful in practice so that train control can benefit from formal verification.
+I am interested in closing the gaps between our research and what industry would find useful in practice.
 
 ## References
 
