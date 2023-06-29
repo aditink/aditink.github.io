@@ -5,6 +5,9 @@ date:   2023-06-27 12:07:06 -0400
 categories: draft
 ---
 
+_This post is targeted at a non-formal methods audience, and provides the motivation and overview for our work on verified train protection systems._
+
+
 Train protection systems safeguard railroad operation by keeping motion within a safe envelope, deciding when to slow trains down to avoid collisions with other trains on the track, stay inside movement authorities (the region of the track that a signalling system allows a train to be in), and navigate slopes, curves, and tunnels safely.
 Given the frequency and deadliness of train safety incidents around the world, train protection software has a huge potential for positive impact.
 But how do we make sure that the train protection software _itself_ is correct?
@@ -30,15 +33,14 @@ By using mathematical rules, we were able to derive the conclusion we were inter
 Train controllers are certainly a lot more complicated, but the same idea applies: use mathematical transformations to derive conclusions about the controller with certainty.
 Further, to preclude the possibility of human error in the math, a computer checks the proof to certify that it works out.
 
-## Why Formal Verification?
 
 Being certain about correctness is very valuable.
 Not only does it save lives and provide peace of mind, but also, precision in reasoning can permit more aggressive, efficient train operation.
-No longer would engineers have to leave conservative margins for errors that they can not precisely reason about.
+No longer would engineers have to leave large, conservative margins for the errors that they can not currently reason about precisely.
 Trains scheduled closer together can mean increased throughput.
-Likewise, as trains driven by artificial intelligence become a possibility, it is more important than ever to secure efficient but poorly understood machine learning-based decisions within trustworthy, highly reliable train protection software.
+Likewise, as trains driven by artificial intelligence become a possibility, it would be more important than ever to secure efficient but poorly understood machine learning-based decisions within trustworthy, highly reliable train protection software.
 Knowing that the train protection software handles every edge case correctly becomes essential.
-Formal methods-based verification can also make it easier to handle updated system requirements than simulations.
+Formal methods-based verification can also make it easier to handle updated system requirements than a simulation and testing approach to validation, resulting in faster development cycles.
 Instead of rerunning an entire test suite, only relevant modification in the proof would be required.
 
 ## A Proof of Concept Verified Train Protection System
@@ -48,7 +50,7 @@ We proved the train protection safe against the train kinematics model from [1] 
 We sought to design a mathematically sophisticated train protection system that was provably safe while still being as efficient as possible.
 The technical challenges are summarized in [our paper at EMSOFT 2022](assets/train-control-emsoft-preprint.pdf), and also in [this video](https://www.youtube.com/watch?v=TKRSZA_61cM) of the corresponding talk.
 Running some experiments to understand the behavior of our system, relative to the PTC algorithm specified in [1], we found scenarios where the verified protection system a 4X improvement in reducing the undershoot during braking enforcement.
-The train protection system that we created was symbolic, meaning that by substituting in concrete values for the various parameters via the appropriate methods [2], we can easily obtain concrete verified controller tailored to specific railroads and trains.
+The train protection system that we created was symbolic, meaning that by substituting in concrete values for the various parameters via the appropriate methods [2], we can easily obtain concrete verified train protection system tailored to specific railroads and trains.
 I am interested in closing the gaps between the current state of the art in verification and what industry would find useful in practice so that train control can benefit from formal verification.
 
 ## References
