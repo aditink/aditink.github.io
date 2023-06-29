@@ -26,7 +26,7 @@ The nice thing about mathematical proofs is that when they succeed, they provide
 Thus, a single formal proof corresponds to infinitely many simulations.
 To get a really rough idea of how this might work, think back to middle school math.
 Suppose that you know for a fact that `x<y+1`.
-You now want to check if `x+y<1`.
+You now want to check if `x-y<1`.
 On the one hand, you could write a simulation: run a program that assigning different values to `x` and `y`, and check if things work out. But there are an infinite number of combinations of `x` and `y`, and you will never be able to check all the possibilities.
 But instead, mathematical rules allow us to perform algebraic transformations that are always correct: if `x<y+1`, then `x-y<y+1-y`, which simplifies to `x-y<1`.
 By using mathematical rules, we were able to derive the conclusion we were interested in checking with 100% certainty.
@@ -36,7 +36,7 @@ Further, to preclude the possibility of human error in the math, a computer chec
 
 Being certain about correctness is very valuable.
 Not only does it save lives and provide peace of mind, but also, precision in reasoning can permit more aggressive, efficient train operation.
-No longer would engineers have to leave large, conservative margins for the errors that they can not currently reason about precisely.
+No longer would engineers have to leave large, conservative margins for the errors that they cannot currently reason about precisely.
 Trains scheduled closer together can mean increased throughput.
 Likewise, as trains driven by artificial intelligence become a possibility, it would be more important than ever to secure efficient but poorly understood machine learning-based decisions within trustworthy, highly reliable train protection software.
 Knowing that the train protection software handles every edge case correctly becomes essential.
