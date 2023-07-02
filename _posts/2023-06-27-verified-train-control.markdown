@@ -35,8 +35,7 @@ But instead, mathematical rules allow us to perform algebraic transformations th
 Because the square of a real number is non-negative, `0<=y^2`. Combining this fact with `x^2<y^2+1`, we can conclude `x<0+1`, which simplifies to `x<1`.
 By using mathematical rules, we were able to derive the conclusion we were interested in checking with 100% certainty.
 Train controllers are certainly a lot more complicated, but the same idea applies: use mathematical transformations to derive conclusions about the controller with certainty.
-In contrast with this example, where the conclusion, `x<1`, was immediate and unexciting, a symbolic proof provides great value in concluding the correctness of a train protection system.
-Indeed, without a formal proof, it is practically impossible to be fully confident that you have checked, through simulation and testing, all the "important" scenarios for train control.
+In contrast with this example, where the conclusion, `x<1`, was immediate and unexciting, a symbolic proof provides significant value in concluding the correctness of a train protection system: without a formal proof, it is practically impossible to be fully confident that you have checked, through simulation and testing, all the "important" scenarios for train control.
 To further preclude the possibility of human error in the math, a computer checks the proof to certify that it works out.
 
 
