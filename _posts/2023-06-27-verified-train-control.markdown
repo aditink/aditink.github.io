@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Verified Train Protection System"
+title:  A Verified Train Protection System
 date:   2023-06-27 12:07:06 -0400
 categories: draft
 ---
