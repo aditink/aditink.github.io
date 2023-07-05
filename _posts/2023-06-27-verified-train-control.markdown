@@ -9,11 +9,12 @@ _This post is targeted at a non-formal methods audience and provides the motivat
 
 
 Train protection systems safeguard railroad operation by keeping motion within a safe envelope, deciding when to slow trains down to avoid collisions with other trains on the track, stay inside movement authorities (the region of the track that a signaling system allows a train to be in), and navigate slopes, curves, and tunnels safely.
-Given the frequency and deadliness of train safety incidents around the world, train protection software has a vast potential for positive impact.
+Given the frequency and severity of train safety incidents around the world, train protection software has a vast potential for positive impact.
 But how do we make sure that the train protection software _itself_ is correct?
 The current standard in industry is to run extensive, expensive tests and simulations.
 While this testing goes a long way in catching bugs, it is not infallible.
-Reality restricts engineers from performing a finite number of tests, checking only a small fraction of the infinitely many situations that a train protection system might face.
+One can hardly test for every possible train velocity, every possible terrain, and every possible train consist because there are infinitely many possibilities.
+Reality restricts engineers to performing a finite number of tests, checking only a small fraction of the infinitely many situations that a train protection system might face.
 Train motion is complicated and involves many parameters, as is train infrastructure, with many moving parts and communicating subsystems.
 Testing is simply too limited a technology to check every scenario and catch every bug.
 
@@ -27,14 +28,16 @@ Thus, a single formal proof corresponds to infinitely many simulations.
 
 
 To get a really rough idea of how this idea of guaranteed correctness might work, think back to middle school math.
-Suppose you know that `x^2<y^2+1` where `x` and `y` represent real numbers.
-You now want to check if `x^2<1`.
-On the one hand, you could write a simulation: run a program that assigns different values to `x` and `y`, and check if things work out. But there are an infinite number of combinations of `x` and `y`, and you will never be able to check all the possibilities.
+Suppose you know that `v^2<u^2+x` and `x<42` where `u` and `v` represent initial and final velocity of an object, and `x`, the distance traveled.
+You now want to check if `v^2<42`.
+On the one hand, you could write a simulation: run a program that assigns different values to `v`, `u` and `x`, and check if things work out.
+But there are an infinite number of combinations of `v`, `u` and `x`; you will never be able to check all the possibilities.
 But instead, mathematical rules allow us to perform algebraic transformations that are always correct.
-Because the square of a real number is non-negative, `0<=y^2`. Combining this fact with `x^2<y^2+1`, we can conclude `x^2<0+1`, which simplifies to `x^2<1`.
+Because the square of a real number is non-negative, `0<=u^2`. Combining this fact with `v^2<u^2+x`, we can conclude `v^2<0+x`, which simplifies to `v^2<x`.
+Then, combining `v^2<x` with `x<42`, we can conclude `v^2<42`.
 By using mathematical rules, we were able to derive the conclusion we were interested in checking with 100% certainty.
 Train controllers are certainly a lot more complicated, but the same idea applies: use mathematical transformations to derive conclusions about the controller with certainty.
-In contrast with this example, where the conclusion, `x^2<1`, was immediate and unexciting, a symbolic proof would provide significant value in concluding the correctness of a train protection system: without a formal proof, it is practically impossible to be fully confident that you have checked, through simulation and testing, all the "important" scenarios for train control.
+In contrast with this example, where the conclusion, `v^2<42`, was immediate and unexciting, a symbolic proof would provide significant value in concluding the correctness of a train protection system: without a formal proof, it is practically impossible to be fully confident that you have checked, through simulation and testing, all the "important" scenarios for train control.
 To further preclude the possibility of human error in the math, a computer checks the proof to certify that it works out.
 
 
