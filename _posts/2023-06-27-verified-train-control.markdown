@@ -1,41 +1,40 @@
 ---
 layout: post
-title:  "A Verified Train Protection System"
-date:   2023-06-27 12:07:06 -0400
+title:  "A Verified Train Protection System"
+date:   2023-06-27 12:07:06 -0400
 categories: draft
 ---
 
-_This post is targeted at a non-formal methods audience, and provides the motivation and overview for our work on verified train protection systems._
+_This post is targeted at a non-formal methods audience and provides the motivation and overview for our work on verified train protection systems._
 
 
-Train protection systems safeguard railroad operation by keeping motion within a safe envelope, deciding when to slow trains down to avoid collisions with other trains on the track, stay inside movement authorities (the region of the track that a signalling system allows a train to be in), and navigate slopes, curves, and tunnels safely.
-Given the frequency and deadliness of train safety incidents around the world, train protection software has a huge potential for positive impact.
+Train protection systems safeguard railroad operation by keeping motion within a safe envelope, deciding when to slow trains down to avoid collisions with other trains on the track, stay inside movement authorities (the region of the track that a signaling system allows a train to be in), and navigate slopes, curves, and tunnels safely.
+Given the frequency and deadliness of train safety incidents around the world, train protection software has a vast potential for positive impact.
 But how do we make sure that the train protection software _itself_ is correct?
-The standard in industry currently is to run extensive, expensive tests and simulations.
-While this testing goes a long way in catching bugs, it is still not completely reliable.
-Reality restricts engineers to performing a finite number of tests, checking only a small fraction of the infinitely many situations that a train protection system might face.
-Train motion is complicated and involves many parameters, and train infrastructure is complicated with many moving parts and communicating subsystems.
+The current standard in industry is to run extensive, expensive tests and simulations.
+While this testing goes a long way in catching bugs, it is not infallible.
+Reality restricts engineers from performing a finite number of tests, checking only a small fraction of the infinitely many situations that a train protection system might face.
+Train motion is complicated and involves many parameters, as is train infrastructure, with many moving parts and communicating subsystems.
 Testing is simply too limited a technology to check every scenario and catch every bug.
 
 ## Formal Verification
 
 This is where formal verification enters the picture.
-The idea is to model the train control software as well as train subsystems and dynamics mathematically, in a suitable logic.
-Within this logic, following mathematical rules, we write a _proof of safety_.
-This proof of safety is an argument consisting of a series of mathematical (deductive) steps that establish that the logical expression for "this train protection system ensures that the train never exceeds exits its end of movement authority" follows from stated assumptions about how trains behave and the operational settings under which the controller is running.
+The idea is to model the train control software, train subsystems, and dynamics mathematically, in a suitable logic.
+Within this logic, following mathematical rules, we write a _proof of safety_, an argument consisting of a series of mathematical steps that establish that the logical expression for "this train protection system ensures that the train never exceeds its movement authority" follows from stated assumptions about how trains behave and the operational settings under which the controller is running.
 The nice thing about mathematical proofs is that when they succeed, they provide a complete guarantee, checking safety in every modeled scenario.
 Thus, a single formal proof corresponds to infinitely many simulations.
 
 
 To get a really rough idea of how this idea of guaranteed correctness might work, think back to middle school math.
-Suppose that you know for a fact that `x^2<y^2+1` where `x` and `y` represent distances, and are therefore real numbers.
-You now want to check if `x<1`.
-On the one hand, you could write a simulation: run a program that assigning different values to `x` and `y`, and check if things work out. But there are an infinite number of combinations of `x` and `y`, and you will never be able to check all the possibilities.
+Suppose you know that `x^2<y^2+1` where `x` and `y` represent real numbers.
+You now want to check if `x^2<1`.
+On the one hand, you could write a simulation: run a program that assigns different values to `x` and `y`, and check if things work out. But there are an infinite number of combinations of `x` and `y`, and you will never be able to check all the possibilities.
 But instead, mathematical rules allow us to perform algebraic transformations that are always correct.
-Because the square of a real number is non-negative, `0<=y^2`. Combining this fact with `x^2<y^2+1`, we can conclude `x<0+1`, which simplifies to `x<1`.
+Because the square of a real number is non-negative, `0<=y^2`. Combining this fact with `x^2<y^2+1`, we can conclude `x^2<0+1`, which simplifies to `x^2<1`.
 By using mathematical rules, we were able to derive the conclusion we were interested in checking with 100% certainty.
 Train controllers are certainly a lot more complicated, but the same idea applies: use mathematical transformations to derive conclusions about the controller with certainty.
-In contrast with this example, where the conclusion, `x<1`, was immediate and unexciting, a symbolic proof provides significant value in concluding the correctness of a train protection system: without a formal proof, it is practically impossible to be fully confident that you have checked, through simulation and testing, all the "important" scenarios for train control.
+In contrast with this example, where the conclusion, `x^2<1`, was immediate and unexciting, a symbolic proof would provide significant value in concluding the correctness of a train protection system: without a formal proof, it is practically impossible to be fully confident that you have checked, through simulation and testing, all the "important" scenarios for train control.
 To further preclude the possibility of human error in the math, a computer checks the proof to certify that it works out.
 
 
@@ -50,21 +49,20 @@ Instead of rerunning an entire test suite, only relevant modification in the pro
 
 ## A Proof of Concept Verified Train Protection System
 
-As a proof of concept, we created a verified train protection system.
+As proof of concept, we created a verified train protection system.
 We proved the train protection safe against the train kinematics model from [1] (the FRA paper that develops a PTC braking algorithm for freight trains).
 We sought to design a mathematically sophisticated train protection system that was provably safe while still being as efficient as possible.
 The technical challenges are summarized in [our paper at EMSOFT 2022](assets/train-control-emsoft-preprint.pdf), and also in [this video](https://www.youtube.com/watch?v=TKRSZA_61cM) of the corresponding talk.
-Our verified system is written with non-determinism, and represents thus _multiple_ controllers, all proved safe at once.
-Each controller can be extracted by resolving the non-determinism in different ways, for example, by choosing in ways to maximize energy efficiency, and inherits the safety proof automatically.
-Thus, the verified train control system can be seen as an _envelope_ around all safe control.
-
+Our verified train protection system is written with non-determinism and thus represents _multiple_ controllers, all proved safe at once.
+Each controller can be extracted by resolving the non-determinism in different ways, (for example, optimizing for energy efficiency), and inherits the safety proof automatically.
+Thus, the verified train protection system can be seen as an _envelope_ around safe control.
+The fact that our system is a non-deterministic control envelope means that existing control systems, whether human or automated, can also run inside it for an extra level of safety.
 
 Running some experiments to understand the behavior of our system, relative to the PTC algorithm specified in [1], we found scenarios where the verified protection system achieved a 4X reduction in the undershoot (train stopping before it is required to, because of conservative reasoning about errors) during braking enforcement.
 Less undershoot can mean greater train throughput and therefore increased efficiency.
-At the same time, in all the scenarios that we checked, our system successfully prevented overshoot (the train going past the end of motion authority, which is a safety violation).
-The train protection system that we created was symbolic, meaning that by substituting in concrete values for the various parameters via the appropriate methods [2], we can easily obtain concrete verified train protection system tailored to specific railroads and trains.
-In order to go from our the proof written in logic to code that runs on actual computers, we use an automatic, verified conversion pipeline [3].
-The fact that our system is a non-deterministic control envelope means that existing control systems, whether human or automated, can also run inside it for an extra level of safety.
+At the same time, in all the scenarios we checked, our system successfully prevented overshoot (the train going past the end of motion authority, which is a safety violation, to be avoided at all costs).
+The train protection system that we created was symbolic, meaning that by substituting concrete values for the various parameters via the appropriate methods [2], we can easily obtain concrete verified train protection systems tailored to specific railroads and trains.
+A verified conversion pipeline [3] allows us to go from our the proof written in logic to verified code that runs on actual computers automatically.
 I am interested in closing the gaps between our research and what industry would find useful in practice.
 
 ## References
