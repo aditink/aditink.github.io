@@ -59,6 +59,7 @@ The technical challenges are summarized in [our paper at EMSOFT 2022](assets/tra
 Our verified train protection system is written with non-determinism and thus represents _multiple_ controllers, all proved safe at once.
 Each controller can be extracted by resolving the non-determinism in different ways, (for example, optimizing for energy efficiency), and inherits the safety proof automatically.
 Thus, the verified train protection system can be seen as an _envelope_ around safe control.
+This envelope around safe _control actions_ is not to be confused with motion authorities or moving blocks, which are envelopes around _train position_.
 The fact that our system is a non-deterministic control envelope means that existing control systems, whether human or automated, can also run inside it for an extra level of safety.
 
 Running some experiments to understand the behavior of our system, relative to the PTC algorithm specified in [1], we found scenarios where the verified protection system achieved a 4X reduction in the undershoot (train stopping before it is required to, because of conservative reasoning about errors) during braking enforcement.
