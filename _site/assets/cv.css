@@ -1,8 +1,0 @@
-.rightDate{
-    text-align: right;
-    font-style: italic;
-    margin: 0px;
-    margin-top: -15px;
-}
-/* TODO the default $spacing-unit in minima is 30px. Hence the hacky thing above.
-Replace with flex boxes or something. */
