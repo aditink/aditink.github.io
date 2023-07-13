@@ -55,7 +55,7 @@ Instead of rerunning an entire test suite, only relevant modification in the pro
 As proof of concept, we created a verified train protection system.
 We proved the train protection safe against the train kinematics model from [1] (the FRA paper that develops a PTC braking algorithm for freight trains).
 We sought to design a mathematically sophisticated train protection system that was provably safe while still being as efficient as possible.
-The technical challenges are summarized in [our paper at EMSOFT 2022](assets/train-control-emsoft-preprint.pdf), and also in [this video](https://www.youtube.com/watch?v=TKRSZA_61cM) of the corresponding talk.
+The technical challenges are summarized in [our paper at EMSOFT 2022](/assets/train-control-emsoft-preprint.pdf), and also in [this video](https://www.youtube.com/watch?v=TKRSZA_61cM) of the corresponding talk.
 Our verified train protection system is written with non-determinism and thus represents _multiple_ controllers, all proved safe at once.
 Each controller can be extracted by resolving the non-determinism in different ways, (for example, optimizing for energy efficiency), and inherits the safety proof automatically.
 Thus, the verified train protection system can be seen as an _envelope_ around safe control.
