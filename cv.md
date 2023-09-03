@@ -48,11 +48,11 @@ and synthesis.
 
 #### Capra, Cornell University
 <p class="rightDate">2018-2020</p>
-As an undergraduate at Cornell, I was a part of (Capra)["https://capra.cs.cornell.edu/"], where I contributed to (Gator)[/assets/gator-oopsla2020-preprint.pdf], a DSL for geometry types, and on (an algorithm)[/assets/commutativity-tapas2020-preprint.pdf] to efficiently verify the commutativity of diagrams such as those representing the transformation between types.
+As an undergraduate at Cornell, I was a part of [Capra](https://capra.cs.cornell.edu/), where I contributed to [Gator](/assets/gator-oopsla2020-preprint.pdf), a DSL for geometry types, and on [an algorithm](/assets/commutativity-tapas2020-preprint.pdf) to efficiently verify the commutativity of diagrams such as those representing the transformation between types.
 
 #### McMahon Lab, Cornell University
 <p class="rightDate">2019</p>
-At the (McMahon Lab)[https://mcmahon.aep.cornell.edu/], I worked on understanding the scope and applications of Gaussian Boson Sampling.
+At the [McMahon Lab](https://mcmahon.aep.cornell.edu/), I worked on understanding the scope and applications of Gaussian Boson Sampling.
 
 #### CLASSE, Cornell University 
 <p class="rightDate">2016, 2017</p>
@@ -91,7 +91,7 @@ Data Structures and Object Oriented Programming. &emsp; *Spring 2017, Fall 2017.
 - Subreviewed for ICCPS 2021.
 
 ## Awards
-- (Swartz Innovation Commercialization Fellow)[https://www.cmu.edu/swartz-center-for-entrepreneurship/education-and-resources/innovation-fellows/current-fellows.html], 2023.
+- [Swartz Innovation Commercialization Fellow](https://www.cmu.edu/swartz-center-for-entrepreneurship/education-and-resources/innovation-fellows/current-fellows.html), 2023.
 - Promising Scholar, 2022, Maheshwari Vidya Pracharak Mandal.
 - Scholarship to attend Grace Hopper Conference, 2022.
 - Scholarship to attend WiL at LICS 2021.
