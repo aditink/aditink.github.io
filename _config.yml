@@ -15,8 +15,9 @@
 # in the templates via {{ site.myvariable }}.
 title: Aditi Kabra
 email: akabra@cs.cmu.edu
+address: 9023, Gates and Hillman Complex, Pittsburgh
 description: PhD student in Computer Science at Carnegie Mellon University
-short_description: 9023 Gates and Hillman Centers
+short_description:
 long_description:
   I'm a fourth year PhD student at Carnegie Mellon University, advised by André Platzer at the <a href="https://www.ls.cs.cmu.edu/">Logical Systems Lab</a>.
   I am interested in the synthesis of controllers for cyber physical systems, and more generally in formal methods.
