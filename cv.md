@@ -1,7 +1,7 @@
 ---
 layout: cv
-title: Curriculum Vitae
-order: 2
+title: CV
+order: 3
 permalink: /cv/
 ---
 
@@ -39,20 +39,20 @@ with distinction in all subjects. <br>
 #### Logical Systems Lab
 <p class="rightDate">2020-present</p>
 - Designed and formally verified a train control system for the full US Federal Railway
-Authority physics model in collaboration with Siemens. Paper accepted to EMSOFT 2022.
+Authority physics model in collaboration with Siemens. (Paper)[assets/train-control-emsoft-preprint.pdf] accepted to EMSOFT 2022.
 - Creating a framework to deductively synthesize formally verified controllers given a
-specification of the environment, safety contract, and possible action space of a cyber physical system. Proof search is to be done by an AlphaZero-like agent in differential dynamic logic.
+specification of the environment, safety contract, and possible action space of a cyber physical system.
 - Designed an algorithm to automatically generate symbolic bounds on differential
-equations along with a proof certificate, with application in CPS controller verification
+inequalities, with application in CPS controller verification
 and synthesis.
 
 #### Capra, Cornell University
 <p class="rightDate">2018-2020</p>
-Worked on Gator, a DSL for geometry types, and on verifying if graphs, such as those modeling implicit type conversion in scala, commute.
+As an undergraduate at Cornell, I was a part of (Capra)["https://capra.cs.cornell.edu/"], where I contributed to (Gator)[/assets/gator-oopsla2020-preprint.pdf], a DSL for geometry types, and on (an algorithm)[/assets/commutativity-tapas2020-preprint.pdf] to efficiently verify the commutativity of diagrams such as those representing the transformation between types.
 
 #### McMahon Lab, Cornell University
 <p class="rightDate">2019</p>
-Worked on identifying the applications and limitations of Gaussian Boson Sampling, a near term optical quantum computing device.
+At the (McMahon Lab)[https://mcmahon.aep.cornell.edu/], I worked on understanding the scope and applications of Gaussian Boson Sampling.
 
 #### CLASSE, Cornell University 
 <p class="rightDate">2016, 2017</p>
@@ -72,6 +72,7 @@ Chrome User Metrics Analysis Team. &emsp; *May 2017 - August 2017.* <br>
 ## Teaching
 
 #### Teaching Assistant, Carnegie Mellon University, Pittsburgh, PA
+Software Foundations of Security and Privacy. &emsp; *Fall 2022.* <br>
 Logical Foundations of Cyber Physical Systems. &emsp; *Fall 2021.* <br>
 
 #### Teaching Assistant, Cornell University, Ithaca, NY
@@ -80,8 +81,17 @@ Introduction to Algorithms. &emsp; *Spring 2018, Spring 2019.* <br>
 Data Structures and Object Oriented Programming. &emsp; *Spring 2017, Fall 2017.* <br>
 
 ## Service
-
+- Subreviewed for LICS 2023.
+- Subreviewed for NFM 2023.
+- Member of artifact evaluation committee, ASPLOS 2023.
+- Subreviewed for FM 2022.
 - Subreviewed for ICCPS 2022.
 - Subreviewed for iFM 2022.
 - Member of artifact evaluation committee, ASPLOS 2021.
 - Subreviewed for ICCPS 2021.
+
+## Awards
+- (Swartz Innovation Commercialization Fellow)[https://www.cmu.edu/swartz-center-for-entrepreneurship/education-and-resources/innovation-fellows/current-fellows.html], 2023.
+- Promising Scholar, 2022, Maheshwari Vidya Pracharak Mandal.
+- Scholarship to attend Grace Hopper Conference, 2022.
+- Scholarship to attend WiL at LICS 2021.
