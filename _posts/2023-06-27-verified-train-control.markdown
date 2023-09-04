@@ -5,6 +5,8 @@ date:   2023-06-27 12:07:06 -0400
 categories: draft
 ---
 
+![Designing a Verified Train Protection System](/assets/train.png)
+
 _This post is targeted at a non-formal methods audience and provides the motivation and overview for our work on verified train protection systems._
 
 

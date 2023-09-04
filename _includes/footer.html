@@ -21,6 +21,9 @@
             {%- if site.address -%}
             <li class="p-name">{{ site.address | escape }}</li>
             {%- endif -%}
+            {%- if site.orcid_id -%}
+            <li class="p-name">Orcid id {{ site.orcid_id | escape }}</li>
+            {%- endif -%} 
         </ul>
       </div>
 
