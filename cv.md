@@ -9,6 +9,9 @@ permalink: /cv/
 I am interested in cyber physical system (CPS) controller synthesis, and more generally, in formal methods.
 
 ## Publications
+[CESAR: Control Envelope Synthesis via Angelic Refinements](https://arxiv.org/abs/2311.02833). Aditi Kabra, Jonathan Laurent, Stefan Mitsch, André Platzer. <br>
+TACAS 2024.
+
 [Verified Train Controllers for the Federal Railroad Administration Model: Balancing Competing Brake and Track Forces](assets/train-control-emsoft-preprint.pdf). Aditi Kabra, Stefan Mitsch, André Platzer. <br>
 EMSOFT 2022. Best Paper finalist.
 
@@ -22,7 +25,7 @@ TAPAS 2020.
 
 #### Candidate for PhD in Computer Science, Carnegie Mellon University, Pittsburgh, PA, USA
 Fall 2020 - present. <br>
-Advisor: André Platzer.
+Advisors: André Platzer and Stefan Mitsch.
 
 #### Bachelor of Arts, Cornell University, Ithaca, NY, USA - 2019
 *magna cum laude* in Computer Science <br>

@@ -19,8 +19,8 @@ address: 9023, Gates Hillman Complex, Pittsburgh
 description: PhD student in Computer Science at Carnegie Mellon University
 short_description:
 long_description:
-  I'm a fourth year PhD student at Carnegie Mellon University, advised by André Platzer at the <a href="https://www.ls.cs.cmu.edu/">Logical Systems Lab</a>.
-  I am interested in the synthesis of controllers for cyber physical systems, and more generally in formal methods.
+  I'm a fourth year PhD student at Carnegie Mellon University, advised by <a href="https://symbolaris.com/index.html">André Platzer</a> and <a href="https://www.cs.cmu.edu/~smitsch/">Stefan Mitsch</a> at the <a href="https://www.ls.cs.cmu.edu/">Logical Systems Lab</a>.
+  I am interested in the synthesis of safe control envelopes for cyber physical systems, and more generally in formal methods.
   I'm excited about scaling verified controller design to handle greater complexity and require lower manual effort.
   I also work on verified train control.
 baseurl: "" # the subpath of your site, e.g. /blog

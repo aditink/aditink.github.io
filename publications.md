@@ -5,6 +5,8 @@ permalink: /publications/
 order: 1
 ---
 
+[CESAR: Control Envelope Synthesis via Angelic Refinements](https://arxiv.org/abs/2311.02833). Aditi Kabra, Jonathan Laurent, Stefan Mitsch, André Platzer. TACAS 2024.
+
 [Verified Train Controllers for the Federal Railroad Administration Model: Balancing Competing Brake and Track Forces](assets/train-control-emsoft-preprint.pdf). Aditi Kabra, Stefan Mitsch, André Platzer.
 EMSOFT 2022.
 
