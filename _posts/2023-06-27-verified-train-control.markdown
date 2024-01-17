@@ -54,8 +54,8 @@ Instead of rerunning an entire test suite, only relevant modification in the pro
 
 ## A Proof of Concept Verified Train Protection System
 
-As proof of concept, we created a verified train protection system.
-We proved the train protection safe against the train kinematics model from [1] (the FRA paper that develops a PTC braking algorithm for freight trains).
+As proof of concept, we created a verified train protection system [1].
+We proved the train protection safe against the train kinematics model from [2] (the FRA paper that develops a PTC braking algorithm for freight trains).
 We sought to design a mathematically sophisticated train protection system that was provably safe while still being as efficient as possible.
 The technical challenges are summarized in [our paper at EMSOFT 2022](/assets/train-control-emsoft-preprint.pdf), and also in [this video](https://www.youtube.com/watch?v=TKRSZA_61cM) of the corresponding talk.
 Our verified train protection system is written with non-determinism and thus represents _multiple_ controllers, all proved safe at once.
@@ -64,17 +64,19 @@ Thus, the verified train protection system can be seen as an _envelope_ around s
 This envelope around safe _control actions_ is not to be confused with motion authorities or moving blocks, which are envelopes around _train position_.
 The fact that our system is a non-deterministic control envelope means that existing control systems, whether human or automated, can also run inside it for an extra level of safety.
 
-Running some experiments to understand the behavior of our system, relative to the PTC algorithm specified in [1], we found scenarios where the verified protection system achieved a 4X reduction in the undershoot (train stopping before it is required to, because of conservative reasoning about errors) during braking enforcement.
+Running some experiments to understand the behavior of our system, relative to the PTC algorithm specified in [2], we found scenarios where the verified protection system achieved a 4X reduction in the undershoot (train stopping before it is required to, because of conservative reasoning about errors) during braking enforcement.
 Less undershoot can mean greater train throughput and therefore increased efficiency.
 At the same time, in all the scenarios we checked, our system successfully prevented overshoot (the train going past the end of motion authority, which is a safety violation, to be avoided at all costs).
-The train protection system that we created was symbolic, meaning that by substituting concrete values for the various parameters via the appropriate methods [2], we can easily obtain concrete verified train protection systems tailored to specific railroads and trains.
-A verified conversion pipeline [3] allows us to go from our the proof written in logic to verified code that runs on actual computers automatically.
+The train protection system that we created was symbolic, meaning that by substituting concrete values for the various parameters via the appropriate methods [3], we can easily obtain concrete verified train protection systems tailored to specific railroads and trains.
+A verified conversion pipeline [4] allows us to go from our the proof written in logic to verified code that runs on actual computers automatically.
 I am interested in closing the gaps between our research and what industry would find useful in practice.
 
 ## References
 
-[1] J. Brosseau, B. M. Ede, S. Pate, R. Wiley, and J. Drapa, “Development of an operationally efficient PTC braking enforcement algorithm for freight trains,” Tech. Rep. DOT/FRA/ORD-13/34, 2013.
+[1] A. Kabra, S. Mitsch and A. Platzer, "Verified Train Controllers for the Federal Railroad Administration Train Kinematics Model: Balancing Competing Brake and Track Forces," in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, vol. 41, no. 11, pp. 4409-4420, 2022, doi: 10.1109/TCAD.2022.3197690.
 
-[2] A. Platzer, “A complete uniform substitution calculus for differential dynamic logic,” J. Autom. Reas., vol. 59, no. 2, pp. 219–265, 2017.
+[2] J. Brosseau, B. M. Ede, S. Pate, R. Wiley, and J. Drapa, “Development of an operationally efficient PTC braking enforcement algorithm for freight trains,” Tech. Rep. DOT/FRA/ORD-13/34, 2013.
 
-[3] R. Bohrer, Y. K. Tan, S. Mitsch, M. Myreen and A. Platzer, "VeriPhy: verified controller executables from verified cyber-physical system models", PLDI 2018.
+[3] A. Platzer, “A complete uniform substitution calculus for differential dynamic logic,” J. Autom. Reas., vol. 59, no. 2, pp. 219–265, 2017.
+
+[4] R. Bohrer, Y. K. Tan, S. Mitsch, M. Myreen and A. Platzer, "VeriPhy: verified controller executables from verified cyber-physical system models", PLDI 2018.
