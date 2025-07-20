@@ -73,7 +73,7 @@ But LLMs currently have accuracy limitations.
 Humans, while comparatively accurate, are limited by memory and speed of mental execution of algorithms.
 The overall "usefulness" of a problem-solving system for a given technique is generally bounded by its weakest dimension.
 For example, when humans face an algorithmic question, generality is not an issue and performance on accuracy can be acceptable, but efficiency becomes the bottleneck that makes complex computations out of reach without external tools.
-We next show a qualitative visualization summarizing this discussion.
+The interactive visualization below summarizes this discussion, where the graphs are meant to be *qualitative* and approximate.
 <style>
 .responsive-iframe-container {
   position: relative;
