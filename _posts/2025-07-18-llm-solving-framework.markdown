@@ -24,7 +24,7 @@ For example, formalizing a novel idea described in natural language as a mathema
 For each problem-solving technique, the properties we desire in a problem-solving approach (such as querying an LLM), are:
 1. *accuracy*, that is, when an answer is provided, it is correct;
 2. *efficiency*, where reaching the answer consumes minimal time and energy, and
-3. *generality*, that is, ready applicability to most questions without special intervention.
+3. *generality*, that is, the ability to provide an answer for most questions.
 
 What other "solving systems" provide alternatives to LLM inference?
 In this post, we consider *traditional computing*, that is programs without any statistical inference or learning from data, and *human reasoning*.
@@ -67,6 +67,40 @@ We discuss the tradeoffs that each problem-solving *system* offers for each solv
    In everyday life, society is an abstraction that lets people interact with the 8 billion other people in the world without getting overwhelmed by reasoning about every individual's role.
    At the leading edge of human problem-solving ability, we search for the right abstractions to predict or explain the behavior of the world, such as physicists seeking a small set of rules to predict the behavior of the universe, or mathematicians developing the right language to precisely represent the defining features of problems.
 
+In summary, traditional computing has high accuracy, but is limited by generality when identifying abstractions and decompositions.
+Humans and LLMs are pretty general.
+But LLMs currently have accuracy limitations.
+Humans, while comparatively accurate, are limited by memory and speed of mental execution of algorithms.
+The overall "usefulness" of a problem-solving system for a given technique is generally bounded by its weakest dimension.
+For example, when humans face an algorithmic question, generality is not an issue and performance on accuracy can be acceptable, but efficiency becomes the bottleneck that makes complex computations out of reach without external tools.
+We next show a qualitative visualization summarizing this discussion.
+<style>
+.responsive-iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 102%; /* aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-iframe-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
+
+<div class="responsive-iframe-container">
+  <iframe
+    src="https://sagar-bharadwaj-ks.github.io/LLMBlogVisualization/"
+    title="LLM Blog Visualization"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
 This discussion gives us a framework to predict what problems LLMs would be good at solving, and where they would benefit from external help, tooling, and verification of their output.
 To multiply large numbers, LLMs would generally be better off writing a traditional computer program than reasoning through the problem directly.
 LLMs would be able to recall the name of a bone in the human body easily and fairly accurately.
@@ -81,6 +115,3 @@ All four types of reasoning play off each other.
 A significant strength of LLMs is that they show some ability to perform operations across all four domains.
 Humans have experienced drastically improved problem-solving ability as we build tools that compensate for the areas where we are weakest.
 Similarly, for problems that LLMs struggle with but that humanity cares about automating, building the *tools* that compensate for their weaknesses will likely be an interesting area of research.
-
-
-_Acknowledgements: We thank André Platzer for feedback on this post._
