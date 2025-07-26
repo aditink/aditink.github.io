@@ -15,7 +15,7 @@ OOPSLA 2020.
 
 ## Short Papers
 
-Can Large Language Models Autoformalize Kinematics?. Aditi Kabra, Jonathan Laurent, Sagar Bharadwaj, Ruben Martins, Stefan Mitsch, André Platzer.
+[Can Large Language Models Autoformalize Kinematics?](assets/autoformalize-kinematics-preprint.pdf). Aditi Kabra, Jonathan Laurent, Sagar Bharadwaj, Ruben Martins, Stefan Mitsch, André Platzer.
 FMCAD 2025.
 
 ## Workshop Papers
