@@ -22,3 +22,7 @@ FMCAD 2025.
 
 [Online Verification of Commutativity](/assets/commutativity-tapas2020-preprint.pdf). Aditi Kabra, Dietrich Geisler, Adrian Sampson.
 TAPAS 2020.
+
+## Preprints
+
+[Hybrid Game Control Envelope Synthesis](https://arxiv.org/abs/2508.05997). Aditi Kabra, Jonathan Laurent, Stefan Mitsch, André Platzer. arXiv preprint, 2025.
