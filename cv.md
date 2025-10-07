@@ -9,6 +9,7 @@ permalink: /cv/
 I am interested in cyber physical system (CPS) controller synthesis, and more generally, in formal methods.
 
 ## Publications
+
 [CESAR: Control Envelope Synthesis via Angelic Refinements](https://arxiv.org/abs/2311.02833). Aditi Kabra, Jonathan Laurent, Stefan Mitsch, André Platzer. <br>
 TACAS 2024.
 
@@ -18,8 +19,19 @@ EMSOFT 2022. Best Paper finalist.
 [Geometry Types for Graphics Programming](/assets/gator-oopsla2020-preprint.pdf). Dietrich Geisler, Irene Yoon, Aditi Kabra, Horace He, Yinnon Sanders, Adrian Sampson. <br>
 OOPSLA 2020.
 
+#### Short Papers
+
+[Can Large Language Models Autoformalize Kinematics?](assets/autoformalize-kinematics-preprint.pdf). Aditi Kabra, Jonathan Laurent, Sagar Bharadwaj, Ruben Martins, Stefan Mitsch, André Platzer.
+FMCAD 2025.
+
+#### Workshop Papers
+
 [Online Verification of Commutativity](/assets/commutativity-tapas2020-preprint.pdf). Aditi Kabra, Dietrich Geisler, Adrian Sampson. <br>
 TAPAS 2020.
+
+#### Preprints
+
+[Hybrid Game Control Envelope Synthesis](https://arxiv.org/abs/2508.05997). Aditi Kabra, Jonathan Laurent, Stefan Mitsch, André Platzer. arXiv preprint, 2025.
 
 ## Education
 
