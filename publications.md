@@ -5,6 +5,8 @@ permalink: /publications/
 order: 1
 ---
 
+[Hybrid Game Control Envelope Synthesis](https://arxiv.org/abs/2508.05997). Aditi Kabra, Jonathan Laurent, Stefan Mitsch, André Platzer. OOPSLA, 2026.
+
 [CESAR: Control Envelope Synthesis via Angelic Refinements](https://arxiv.org/abs/2311.02833). Aditi Kabra, Jonathan Laurent, Stefan Mitsch, André Platzer. TACAS 2024.
 
 [Verified Train Controllers for the Federal Railroad Administration Model: Balancing Competing Brake and Track Forces](assets/train-control-emsoft-preprint.pdf). Aditi Kabra, Stefan Mitsch, André Platzer.
@@ -23,6 +25,5 @@ FMCAD 2025.
 [Online Verification of Commutativity](/assets/commutativity-tapas2020-preprint.pdf). Aditi Kabra, Dietrich Geisler, Adrian Sampson.
 TAPAS 2020.
 
-## Preprints
+<!-- ## Preprints -->
 
-[Hybrid Game Control Envelope Synthesis](https://arxiv.org/abs/2508.05997). Aditi Kabra, Jonathan Laurent, Stefan Mitsch, André Platzer. arXiv preprint, 2025.
