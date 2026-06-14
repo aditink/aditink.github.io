@@ -14,14 +14,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Aditi Kabra
-email: akabra@cs.cmu.edu
-address: 9023, Gates Hillman Complex, Pittsburgh
+email: aditi.kabra AT mistral DOT ai
 description: PhD student in Computer Science at Carnegie Mellon University
 short_description:
 long_description:
-  I'm a sixth year PhD student at Carnegie Mellon University, advised by <a href="https://symbolaris.com/index.html">André Platzer</a> and <a href="https://www.cs.cmu.edu/~smitsch/">Stefan Mitsch</a> at the <a href="https://www.ls.cs.cmu.edu/">Logical Systems Lab</a>.
-  My thesis is about the synthesis of safe control envelopes for cyber physical systems.
-  I'm excited about soundly scaling formal techniques using AI.
+  I'm an AI Scientist at Mistral AI, working on artificial intelligence for formal methods.
+
+  I completed my PhD at Carnegie Mellon University, where I was fortunate to be advised by <a href="https://symbolaris.com/index.html">André Platzer</a> and <a href="https://www.cs.cmu.edu/~smitsch/">Stefan Mitsch</a>.
+  My thesis was about automatically deriving correct symbolic control constraints for cyber physical systems (like cars, trains and planes).
   I have also worked on verified train control.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com

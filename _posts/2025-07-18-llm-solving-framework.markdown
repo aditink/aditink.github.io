@@ -5,6 +5,8 @@ date:   2025-07-18 12:00:00 -0400
 categories: draft
 ---
 
+**[This post was written in mid-2025, and may not apply to later models as advances in machine learning continue.]**
+
 _Aditi Kabra, [Margarida Ferreira](https://marghrid.github.io/), [Sagar Bharadwaj](https://sagar-bharadwaj-ks.github.io/)_
 
 This post presents a framework for predicting what problems LLMs are good at and what problems they would struggle with.
