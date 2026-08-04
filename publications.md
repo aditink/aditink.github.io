@@ -5,6 +5,8 @@ permalink: /publications/
 order: 1
 ---
 
+[LLM-Powered Automatic Theorem Proving and Synthesis for Hybrid Systems and Games](/assets/llm-atp-synthesis-fmcad2026-preprint.pdf). Aditi Kabra, Jonathan Laurent, Ruben Martins, Stefan Mitsch, André Platzer. FMCAD 2026.
+
 [Hybrid Game Control Envelope Synthesis](https://arxiv.org/abs/2508.05997). Aditi Kabra, Jonathan Laurent, Stefan Mitsch, André Platzer. OOPSLA, 2026.
 
 [CESAR: Control Envelope Synthesis via Angelic Refinements](https://arxiv.org/abs/2311.02833). Aditi Kabra, Jonathan Laurent, Stefan Mitsch, André Platzer. TACAS 2024.
@@ -26,4 +28,3 @@ FMCAD 2025.
 TAPAS 2020.
 
 <!-- ## Preprints -->
-
