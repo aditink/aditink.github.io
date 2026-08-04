@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Aditi Kabra
 email: aditi.kabra AT mistral DOT ai
-description: PhD student in Computer Science at Carnegie Mellon University
+description: AI for Formal Verification at Mistral AI
 short_description:
 long_description:
   I'm an AI Scientist at Mistral AI, working on artificial intelligence for formal methods.
